@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Monika Kumari — Developer & Creator</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- BACKGROUND DOT GRID -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ══ NAVIGATION ══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <button class="nav-brand" data-page="home">Monika.</button>
+      <ul class="nav-list" role="list">
+        <li><button class="nav-btn active" data-page="home">Home</button></li>
+        <li><button class="nav-btn" data-page="education">Education</button></li>
+        <li><button class="nav-btn" data-page="projects">Projects</button></li>
+        <li><button class="nav-btn" data-page="goals">Goals</button></li>
+        <li><button class="nav-btn contact-pill" data-page="contact">Contact</button></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mob-menu" id="mobMenu" role="dialog" aria-label="Navigation">
+    <button class="mob-close" id="mobClose" aria-label="Close menu">✕</button>
+    <ul class="mob-list" role="list">
+      <li><button class="nav-btn mob-btn active" data-page="home">Home</button></li>
+      <li><button class="nav-btn mob-btn" data-page="education">Education</button></li>
+      <li><button class="nav-btn mob-btn" data-page="projects">Projects</button></li>
+      <li><button class="nav-btn mob-btn" data-page="goals">Goals</button></li>
+      <li><button class="nav-btn mob-btn" data-page="contact">Contact</button></li>
+    </ul>
+  </div>
+  <div class="mob-overlay" id="mobOverlay"></div>
+
+  <!-- ═══════════════════════════════════
+       HOME PAGE
+  ═══════════════════════════════════ -->
+  <section id="page-home" class="page active">
+
+    <div class="home-wrap">
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero-text">
+          <div class="hero-hello">Hey, I'm</div>
+          <h1 class="hero-name">
+            Monika<br />
+            <span class="name-serif">Kumari.</span>
+          </h1>
+          <p class="hero-line">
+            I write code, break things, and — eventually — fix them too.
+            Currently doing all three at RVSCET, Jamshedpur.
+          </p>
+          <div class="hero-btns">
+            <button class="btn-warm" data-page="projects">See what I've built</button>
+            <button class="btn-bare" data-page="contact">Say hello</button>
+          </div>
+        </div>
+
+        <div class="hero-card-wrap">
+          <!-- Floating personal card -->
+          <div class="persona-card">
+            <div class="persona-avatar">MK</div>
+            <blockquote class="persona-quote">
+              "I love the part of coding where it suddenly just <em>works</em> —
+              even if I'm not entirely sure why."
+            </blockquote>
+            <div class="persona-tags">
+              <span>🎓 B.Tech CSE</span>
+              <span>🛡️ Cybersecurity curious</span>
+              <span>🌱 Always building</span>
+              <span>☕ Tea, not coffee</span>
+            </div>
+            <div class="status-row">
+              <span class="live-dot"></span>
+              <span>Open to collabs &amp; internships</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- THINGS I BELIEVE -->
+      <div class="beliefs-section">
+        <p class="beliefs-label">A few things I actually believe</p>
+        <div class="beliefs-grid">
+          <div class="belief">
+            <span class="belief-mark">—</span>
+            <p>Good code should be readable by a tired version of you at 2am.</p>
+          </div>
+          <div class="belief">
+            <span class="belief-mark">—</span>
+            <p>Design and development aren't separate jobs. The best work happens when they overlap.</p>
+          </div>
+          <div class="belief">
+            <span class="belief-mark">—</span>
+            <p>The best way to learn something is to try to build it before reading the docs.</p>
+          </div>
+          <div class="belief">
+            <span class="belief-mark">—</span>
+            <p>Technology is only meaningful if it solves something real for someone real.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS CLOUD -->
+      <div class="skills-section">
+        <p class="skills-heading">Languages &amp; tools I know (well, most of the time)</p>
+        <div class="skills-cloud" id="skillCloud">
+          <span class="sk sk-lg">HTML</span>
+          <span class="sk sk-md">CSS</span>
+          <span class="sk sk-lg">JavaScript</span>
+          <span class="sk sk-sm">React</span>
+          <span class="sk sk-md">Java</span>
+          <span class="sk sk-sm">Python</span>
+          <span class="sk sk-md">C / C++</span>
+          <span class="sk sk-sm">MySQL</span>
+          <span class="sk sk-xs">Git</span>
+          <span class="sk sk-sm">Figma</span>
+          <span class="sk sk-xs">VS Code</span>
+          <span class="sk sk-sm">Node.js</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       EDUCATION PAGE
+  ═══════════════════════════════════ -->
+  <section id="page-education" class="page">
+    <div class="pg-wrap">
+
+      <header class="pg-head">
+        <h2 class="pg-title">Where I've<br /><em>been learning</em></h2>
+        <p class="pg-sub">The classrooms, the late nights, and everything in between.</p>
+      </header>
+
+      <div class="edu-stack">
+
+        <!-- CURRENT -->
+        <div class="edu-card edu-featured">
+          <div class="edu-top-row">
+            <div class="edu-now-badge">
+              <span class="live-dot"></span> Currently here
+            </div>
+            <span class="edu-year">2026 — Present</span>
+          </div>
+          <div class="edu-logo-row">
+            <span class="edu-logo">RVSCET</span>
+          </div>
+          <h3 class="edu-degree">B.Tech — Computer Science &amp; Engineering</h3>
+          <p class="edu-place">RVSCET, Jamshedpur, Jharkhand</p>
+          <p class="edu-story">
+            Right in the thick of it. Classes in the morning, debugging sessions in the afternoon,
+            and building side projects at night. RVSCET has been where most of my real learning
+            happened — not in textbooks, but in the space between "this should work" and
+            "why isn't this working."
+          </p>
+          <div class="edu-subjects">
+            <span class="subj">Data Structures</span>
+            <span class="subj">Algorithms</span>
+            <span class="subj">Operating Systems</span>
+            <span class="subj">Computer Networks</span>
+            <span class="subj">DBMS</span>
+            <span class="subj">OOP with Java</span>
+            <span class="subj">Web Technologies</span>
+            <span class="subj">Software Engineering</span>
+            <span class="subj">Information Security</span>
+          </div>
+        </div>
+
+        <!-- CLASS 12 -->
+        <div class="edu-card">
+          <div class="edu-top-row">
+            <span class="edu-year">2022 — 2024</span>
+          </div>
+          <h3 class="edu-degree">Higher Secondary — Science (Class XII)</h3>
+          <p class="edu-place">BSEB</p>
+          <p class="edu-story">
+            Physics, Chemistry, Maths. Three subjects that taught me that the answer
+            to every problem exists — you just have to be patient enough to find it.
+            A lesson I carry into code every single day.
+          </p>
+        </div>
+
+        <!-- CLASS 10 -->
+        <div class="edu-card">
+          <div class="edu-top-row">
+            <span class="edu-year">Up to 2022</span>
+          </div>
+          <h3 class="edu-degree">Secondary School (Class X)</h3>
+          <p class="edu-place">BSEB</p>
+          <p class="edu-story">
+            The beginning. Where curiosity was encouraged and the idea that
+            I could eventually make computers do interesting things first felt possible.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       PROJECTS PAGE
+  ═══════════════════════════════════ -->
+  <section id="page-projects" class="page">
+    <div class="pg-wrap">
+
+      <header class="pg-head">
+        <h2 class="pg-title">Things I've<br /><em>actually built</em></h2>
+        <p class="pg-sub">Some finished. Some still being figured out. All real.</p>
+      </header>
+
+      <div class="proj-list">
+
+        <!-- MORPHSHIELD -->
+        <article class="proj-item proj-featured">
+          <div class="proj-left">
+            <div class="proj-num">01</div>
+            <div class="proj-cat">Cybersecurity</div>
+          </div>
+          <div class="proj-right">
+            <div class="proj-icon-row">
+              <span class="proj-icon">🛡️</span>
+              <span class="proj-flag">Featured</span>
+            </div>
+            <h3 class="proj-name">MorphShield</h3>
+            <p class="proj-desc">
+              An adaptive cybersecurity tool built to detect and respond to threats dynamically.
+              The "morph" part is the key — rather than static rules, the defence system
+              shifts based on the nature of incoming threats. Built because I kept wondering
+              why most security tools feel reactive rather than proactive.
+            </p>
+            <p class="proj-note">
+              ✦ The trickiest part? Making it fast enough to actually be useful in real time.
+            </p>
+            <div class="proj-stack">
+              <span>Python</span><span>Network Analysis</span>
+              <span>Threat Detection</span><span>Security Algorithms</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- JANSAHAY -->
+        <article class="proj-item proj-featured">
+          <div class="proj-left">
+            <div class="proj-num">02</div>
+            <div class="proj-cat">Social Impact</div>
+          </div>
+          <div class="proj-right">
+            <div class="proj-icon-row">
+              <span class="proj-icon">🤝</span>
+              <span class="proj-flag">Featured</span>
+            </div>
+            <h3 class="proj-name">JanSahay</h3>
+            <p class="proj-desc">
+              A platform that bridges the gap between citizens and government welfare schemes.
+              Most people don't access benefits they're entitled to — not because they don't qualify,
+              but because navigating the system is exhausting. JanSahay tries to fix that:
+              one place, plain language, real access.
+            </p>
+            <p class="proj-note">
+              ✦ Built with the belief that good UX is a civic responsibility, not a luxury.
+            </p>
+            <div class="proj-stack">
+              <span>React</span><span>Node.js</span>
+              <span>MySQL</span><span>Public Welfare</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- TEMPERATURE CALCULATOR -->
+        <article class="proj-item">
+          <div class="proj-left">
+            <div class="proj-num">03</div>
+            <div class="proj-cat">Utility Tool</div>
+          </div>
+          <div class="proj-right">
+            <div class="proj-icon-row">
+              <span class="proj-icon">🌡️</span>
+            </div>
+            <h3 class="proj-name">Temperature Calculator</h3>
+            <p class="proj-desc">
+              A clean, fast temperature unit converter — Celsius, Fahrenheit, Kelvin,
+              back and forth, instantly. Built because I kept Googling the formula
+              and decided that was one problem I could permanently solve for myself.
+              Simple by design. No fluff.
+            </p>
+            <p class="proj-note">
+              ✦ My first proper JS project where I cared as much about the UI as the logic.
+            </p>
+            <div class="proj-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- LANDING PAGE -->
+        <article class="proj-item">
+          <div class="proj-left">
+            <div class="proj-num">04</div>
+            <div class="proj-cat">Web Design</div>
+          </div>
+          <div class="proj-right">
+            <div class="proj-icon-row">
+              <span class="proj-icon">✦</span>
+            </div>
+            <h3 class="proj-name">Product Landing Page</h3>
+            <p class="proj-desc">
+              A fully responsive product landing page built to practice real-world
+              layout and conversion-focused design. Sections include hero, features,
+              testimonials, pricing, and a call-to-action — all animated on scroll.
+              This one taught me how much visual hierarchy actually matters.
+            </p>
+            <p class="proj-note">
+              ✦ Spent more time on spacing and typography here than on any other project.
+            </p>
+            <div class="proj-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PORTFOLIO -->
+        <article class="proj-item">
+          <div class="proj-left">
+            <div class="proj-num">05</div>
+            <div class="proj-cat">Personal</div>
+          </div>
+          <div class="proj-right">
+            <div class="proj-icon-row">
+              <span class="proj-icon">🌿</span>
+            </div>
+            <h3 class="proj-name">This Portfolio</h3>
+            <p class="proj-desc">
+              You're currently inside it. Built from scratch because I wanted something
+              that felt like <em>me</em> — not a theme, not a template, not
+              "Developer Name | Frontend Engineer" in Helvetica Neue. Every colour,
+              every line of copy, every interaction was a deliberate choice.
+            </p>
+            <p class="proj-note">
+              ✦ Hardest part: writing about yourself without sounding like a LinkedIn post.
+            </p>
+            <div class="proj-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       GOALS PAGE
+  ═══════════════════════════════════ -->
+  <section id="page-goals" class="page">
+    <div class="pg-wrap">
+
+      <header class="pg-head">
+        <h2 class="pg-title">Where I'm<br /><em>heading</em></h2>
+        <p class="pg-sub">Not a bucket list. Things I'm genuinely working towards.</p>
+      </header>
+
+      <div class="goals-layout">
+        <div class="goal-big">
+          <div class="goal-icon">🚀</div>
+          <span class="goal-when soon">within a year</span>
+          <h3>Land my first internship</h3>
+          <p>I want to work in a real codebase, with a real team, on something people actually use.
+          Not a mock project. The real thing — where bugs have consequences and PRs go through review.</p>
+        </div>
+
+        <div class="goal-big">
+          <div class="goal-icon">🌍</div>
+          <span class="goal-when mid">2–3 years</span>
+          <h3>Build something that changes someone's day</h3>
+          <p>JanSahay is a step in this direction. But I want to ship something and
+          hear a real person say "this actually helped me." That's the goal beneath all the other goals.</p>
+        </div>
+
+        <div class="goal-small">
+          <div class="goal-icon-sm">🧠</div>
+          <span class="goal-when soon">ongoing</span>
+          <h3>Get genuinely good at full-stack</h3>
+          <p>Frontend to backend to database to deployment — I want to own the whole pipeline confidently.</p>
+        </div>
+
+        <div class="goal-small">
+          <div class="goal-icon-sm">🔐</div>
+          <span class="goal-when mid">this year</span>
+          <h3>Go deeper into cybersecurity</h3>
+          <p>MorphShield opened a door. I want to walk through it — certifications, CTFs, the works.</p>
+        </div>
+
+        <div class="goal-small">
+          <div class="goal-icon-sm">🤝</div>
+          <span class="goal-when soon">next 6 months</span>
+          <h3>Make my first open source contribution</h3>
+          <p>Start with documentation. Then a small bug fix. Build the habit before the reputation.</p>
+        </div>
+
+        <div class="goal-small">
+          <div class="goal-icon-sm">🎓</div>
+          <span class="goal-when long">post-graduation</span>
+          <h3>Pursue higher education</h3>
+          <p>M.Tech or MS — probably in security or AI. Learning doesn't stop at a degree.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       CONTACT PAGE
+  ═══════════════════════════════════ -->
+  <section id="page-contact" class="page">
+    <div class="pg-wrap">
+
+      <header class="pg-head pg-head-contact">
+        <h2 class="pg-title">Let's<br /><em>talk</em></h2>
+        <p class="pg-sub contact-sub">
+          Whether it's an idea, an opportunity, a collaboration,
+          or just a question about one of my projects — reach out.
+          I'm quick to reply and easy to talk to.
+        </p>
+      </header>
+
+      <div class="contact-body">
+
+        <!-- LINKS -->
+        <div class="contact-links">
+          <p class="links-intro">Find me here:</p>
+
+          <a href="https://linkedin.com/in/monika-kumari-a94704411" target="_blank" rel="noopener" class="clink clink-li">
+            <div class="clink-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </div>
+            <div class="clink-text">
+              <span class="clink-name">LinkedIn</span>
+              <span class="clink-handle">linkedin.com/in/monika-kumari-a94704411</span>
+            </div>
+            <span class="clink-arr" aria-hidden="true">↗</span>
+          </a>
+
+          <a href="mailto:monikakumari20592@gmail.com" class="clink clink-mail">
+            <div class="clink-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m2 7 10 7 10-7"/>
+              </svg>
+            </div>
+            <div class="clink-text">
+              <span class="clink-name">Email</span>
+              <span class="clink-handle">monikakumari20592@gmail.com</span>
+            </div>
+            <span class="clink-arr" aria-hidden="true">↗</span>
+          </a>
+
+          <a href="https://github.com/monikakumari20592-max" target="_blank" rel="noopener" class="clink clink-gh">
+            <div class="clink-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </div>
+            <div class="clink-text">
+              <span class="clink-name">GitHub</span>
+              <span class="clink-handle">github.com/monikakumari20592-max</span>
+            </div>
+            <span class="clink-arr" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <!-- FORM -->
+        <div class="contact-form-wrap">
+          <h3 class="form-heading">Or drop me a message</h3>
+          <div class="contact-form" id="contactForm">
+            <div class="field-row">
+              <div class="field">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" placeholder="What should I call you?" autocomplete="off" />
+              </div>
+              <div class="field">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" placeholder="So I can write back" autocomplete="off" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="fsubject">What's this about?</label>
+              <input type="text" id="fsubject" placeholder="Internship, collab, just saying hi..." autocomplete="off" />
+            </div>
+            <div class="field">
+              <label for="fmsg">Your message</label>
+              <textarea id="fmsg" rows="5" placeholder="Don't overthink it — just type what's on your mind."></textarea>
+            </div>
+            <button class="form-send" id="sendBtn" type="button">Send it</button>
+            <div class="form-ok" id="formOk" aria-live="polite">
+              Got it! I'll be in touch soon ✓
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Made with care by <strong>Monika Kumari</strong></p>
+    <p class="footer-sub">B.Tech CSE · RVSCET, Jamshedpur · 2026–Present</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
